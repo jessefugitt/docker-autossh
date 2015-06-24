@@ -17,7 +17,7 @@ where the syntax is (no command with -N and reverse tunnel with -R) and *:docker
 docker ps (to find container id)
 docker commit fb98e3c79a29 your_namespace/configured-docker-autossh
 ```
-(you need to use another shell to commit the changes to your new image)
+(you need to use another shell to commit the changes to your new image or ctrl-p, ctrl-q)
 
 ###To run
 First, start the running ssh server daemon (see jessefugitt/docker-sshd).  
