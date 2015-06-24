@@ -13,10 +13,18 @@ Modify the reverse tunnel and connection lines:
 ```
 where the syntax is (no command with -N and reverse tunnel with -R) and *:docker-sshd-host-port:local-ip-address:local-port root@docker-sshd-ip-address -p 2222
 
+```
+docker ps (to find container id)
+docker commit fb98e3c79a29 your_namespace/configured-docker-autossh
+```
+(you need to use another shell to commit the changes to your new image)
+
 ###To run
 First, start the running ssh server daemon (see jessefugitt/docker-sshd).  
 Then, run docker-autossh.
 ```
+docker run -d jessefugitt/configured-docker-autossh /autossh-start.sh
+or
 docker run -d jessefugitt/docker-autossh
 ```
 
